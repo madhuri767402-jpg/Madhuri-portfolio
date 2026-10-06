@@ -1,0 +1,492 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Madhuri | Portfolio</title>
+
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            background: #111827;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* ===== HOME ===== */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            padding: 80px 20px;
+        }
+
+        #home h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        #home h1 span {
+            color: #38bdf8;
+        }
+
+        #home p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #38bdf8;
+            color: #111827;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* ===== COMMON SECTION ===== */
+        section {
+            padding: 90px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 38px;
+            margin-bottom: 40px;
+            color: #2563eb;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-text {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill {
+            width: 150px;
+            padding: 25px 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-weight: bold;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        /* ===== PROJECTS ===== */
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .project {
+            width: 300px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* ===== RESUME ===== */
+        #resume {
+            background: #e0f2fe;
+        }
+
+        #resume p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 140px;
+            resize: none;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #home h1 {
+                font-size: 40px;
+            }
+
+            #home p {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 70px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+
+    <nav>
+
+        <h2>Madhuri</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ===== HOME ===== -->
+
+    <section id="home">
+
+        <div>
+
+            <h1>Hello, I'm <span>Madhuri</span></h1>
+
+            <p>
+                BCA Student | Web Developer | AI Enthusiast
+            </p>
+
+            <a href="#about" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== ABOUT ===== -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p class="about-text">
+
+            Hello! My name is Madhuri. I am a BCA student
+            passionate about Web Development, Programming
+            and Artificial Intelligence.
+
+            <br><br>
+
+            I enjoy creating websites and learning new
+            technologies. My goal is to improve my technical
+            skills and build useful real-world applications.
+
+        </p>
+
+    </section>
+
+
+    <!-- ===== SKILLS ===== -->
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">HTML</div>
+
+            <div class="skill">CSS</div>
+
+            <div class="skill">JavaScript</div>
+
+            <div class="skill">Python</div>
+
+            <div class="skill">PHP</div>
+
+            <div class="skill">SQL</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== PROJECTS ===== -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project">
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    A personal portfolio website created
+                    using HTML, CSS and JavaScript.
+                </p>
+
+                <a href="#" class="btn">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Student Registration</h3>
+
+                <p>
+                    A student registration form developed
+                    using HTML and CSS.
+                </p>
+
+                <a href="#" class="btn">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Login Page</h3>
+
+                <p>
+                    A simple responsive login page created
+                    using HTML, CSS and JavaScript.
+                </p>
+
+                <a href="#" class="btn">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== RESUME ===== -->
+
+    <section id="resume">
+
+        <h2>My Resume</h2>
+
+        <p>
+            Interested in knowing more about my education,
+            skills and projects?
+        </p>
+
+        <button class="btn" onclick="downloadResume()">
+            Download Resume
+        </button>
+
+    </section>
+
+
+    <!-- ===== CONTACT ===== -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="contact-form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <textarea
+                id="message"
+                placeholder="Enter your message"
+            ></textarea>
+
+            <button class="btn" onclick="sendMessage()">
+                Send Message
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+
+    <footer>
+
+        <p>
+            © 2026 Madhuri | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+
+    <script>
+
+        // Contact Form
+        function sendMessage() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (name === "" || email === "" || message === "") {
+
+                alert("Please fill all the fields.");
+
+            } else {
+
+                alert(
+                    "Thank you, " + name +
+                    "! Your message has been sent successfully."
+                );
+
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+            }
+        }
+
+
+        // Resume Button
+        function downloadResume() {
+
+            alert(
+                "Resume download will be available soon!"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```
